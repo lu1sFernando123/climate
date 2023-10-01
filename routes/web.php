@@ -54,6 +54,4 @@ Route::get('/petengoran', function () {
 
 
 
-Route::get('/halaman', function () {
-    return view('dashboard\dashboard'); // Ganti 'halaman_saya' dengan nama file Blade atau path file HTML Anda
-});
+

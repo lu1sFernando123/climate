@@ -1,0 +1,39 @@
+/* CSS untuk membuat navbar menjadi rounded rectangle */
+.navbar {
+  border-radius: 20px;
+}
+
+body {
+  min-height: 2000px;
+}
+
+.jumbotron {
+  padding-top: 5rem;
+  padding-bottom: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+  background-color: #1e87f0;
+}
+
+#hasil {
+  background-color: #f3f4f5;
+}
+
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.card-text {
+  font-size: 34pt;
+}
+
+footer {
+  background-color: #1e87f0;
+}
+
+.card-home {
+  background-color: red;
+  padding-bottom: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+}
