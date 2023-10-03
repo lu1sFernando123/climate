@@ -12,7 +12,7 @@ body {
   padding-bottom: 0%;
   padding-left: 0%;
   padding-right: 0%;
-  background-color: #1e87f0;
+  background-color: #ffffff;
 }
 
 #hasil {
@@ -28,7 +28,7 @@ section {
 }
 
 footer {
-  background-color: #1e87f0;
+  background-color: #fefefe;
 }
 
 .card-home {
@@ -36,4 +36,84 @@ footer {
   padding-bottom: 0%;
   padding-left: 0%;
   padding-right: 0%;
+}
+
+.social-icon {
+  color: #ffffff;
+  transition: 0.2s;
+  width: 100%;
+}
+
+.social-icon:hover{
+  color:rgb(0, 0, 0) ;
+}
+
+/* styles.css */
+body {
+  margin: 10;
+  padding: 10;
+}
+
+.bg-light {
+  background-color: #f8f9fa; /* Warna latar belakang terang */
+  color: #000; /* Warna teks hitam */
+}
+
+.social-icon ion-icon {
+  vertical-align: middle; /* Meletakkan ikon setara dengan teks */
+  margin-left: 8px; /* Jarak antara ikon dan teks (sesuaikan sesuai kebutuhan) */
+}
+
+htlm{
+  background-color:#ffffff;
+}
+
+body{
+  font: 16px/1.6 arial, sans-serif;
+}
+
+header{
+  text-align:center;
+  padding-top:100px;
+  margin-bottom: 190px;
+}
+
+header h1{
+  font: normal 32px/1.5 'open sans', sans-serif;
+  color: #00922c;
+  padding-top: 16px;
+}
+
+header h2{
+  color: #000;
+  font-size: 30px;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+}
+
+.footer{
+  background-color: #040a18;
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 50px 50px 60px 50px;
+}
+
+/* Menambahkan margin kanan untuk menggeser teks ke kanan */
+.footer .social-icon {
+  margin-right: 10px;
+}
+
+/* Menengahkan tulisan "Categories" */
+.footer-column {
+  text-align: center;
+}
+
+/* Menggeser tulisan "Created by Microclimate Team © 2023. All rights reserved." ke kanan */
+.footer .social-icon {
+  float: right;
 }
