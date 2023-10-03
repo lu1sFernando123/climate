@@ -1,7 +1,4 @@
-@extends('layouts.main')
-  
 
-@section('container')
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,13 +10,63 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 
     <!-- ini css -->
-    <link rel="stylesheet" href="\resources\css\style.css" />
 
     <title>Dashboard|Petengoran</title>
+    <style>
+      .navbar-nav .nav-link {
+          margin-right: 15px; /* Atur jarak antara item menu */
+      }
+
+      .icon-bars {
+          color: #fff; /* Warna ikon */
+          font-size: 24px; /* Ukuran ikon */
+      }
+      
+      .gauge{
+        padding-top: 5rem;
+        padding-bottom: 0%;
+        padding-left: 0%;
+        padding-right: 0%;
+        background-color: #1e87f0;
+      }
+
+      section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
+      footer{
+        background-color: #1e87f0;
+      }
+    </style>
   </head>
-  <body id="home">
+  <body >
     <!-- bagian navbar -->
-    
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Microclimate</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link {{($title === "home")? 'active' : ''}}" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{($title === "about")? 'active' : ''}}" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{($title === "panjang")? 'active' : ''}}" href="/panjang">Panjang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{($title === "petengoran")? 'active' : ''}}" href="/petengoran">Petengoran</a>
+                </li>
+            </ul>
+            <!-- Ikon "bars" di sini -->
+            <i class="fas fa-bars icon-bars"></i>
+        </div>
+      </div>
+    </nav>
 
     <!-- akhir navbar -->
 
@@ -225,7 +272,7 @@
 
     <!-- akhir -->
     <footer class="background-color text-warning text-center pb-3">
-      <p>Created by <a href="https://www.instagram.com/rijkhan_/" class="text-warning fw-bold">Rizkan Harin</a></p>
+      <p>Created by <a href="https://www.instagram.com/mbkm_petengoran/" class="text-warning fw-bold">Microclimate_petengoran</a></p>
     </footer>
     <!-- akhir dari akhir -->
 
@@ -234,5 +281,3 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   </body>
 </html>
-
- @endsection 
