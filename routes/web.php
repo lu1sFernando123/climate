@@ -47,6 +47,15 @@ Route::get('/petengoran', function () {
         
     ]);
 });
+Route::get('/kontak', function () {
+    return view('kontak',[
+        "title" => "contact",
+
+        
+    ]);
+});
+
+
    
 
 

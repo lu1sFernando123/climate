@@ -36,7 +36,7 @@
         }
       </style>
 
-    <title>Dashboard|Petengoran</title>
+    <title>HOME</title>
     
   </head>
   <body id="home">
@@ -49,18 +49,15 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                      <a class="nav-link {{($title === "home")? 'active' : ''}}" href="/home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link {{($title === "about")? 'active' : ''}}" href="/about">About</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link {{($title === "panjang")? 'active' : ''}}" href="/panjang">Panjang</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link {{($title === "petengoran")? 'active' : ''}}" href="/petengoran">Petengoran</a>
-                  </li>
+                <li class="nav-item">
+                  <a class="nav-link {{($title === "home")? 'active' : ''}}" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {{($title === "about")? 'active' : ''}}" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link {{($title === "kontak")? 'active' : ''}}" href="/kontak">Contact</a>
+                </li>
               </ul>
               <!-- Ikon "bars" di sini -->
               <i class="fas fa-bars icon-bars"></i>
