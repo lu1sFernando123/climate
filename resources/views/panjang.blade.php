@@ -271,9 +271,114 @@
     <!--Akhir Grafik-->
 
     <!-- akhir -->
-    <footer class="background-color text-warning text-center pb-3">
-      <p>Created by <a href="https://www.instagram.com/mbkm_petengoran/" class="text-warning fw-bold">Microclimate_petengoran</a></p>
+
+
+    <!-- awal footer -->
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microclimate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .footer-column {
+            flex: 1;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+
+        .footer-column h5 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .footer-column p {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .social-icons i {
+            font-size: 18px;
+            margin-right: 8px;
+        }
+
+        .social-icon {
+            font-size: 18px;
+            color: white;
+            margin-left: 8px;
+        }
+
+        .footer .social-icon {
+            margin-right: 8px;
+        }
+
+        .footer img {
+            width: 100px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+            float: left;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <img src="https://i.ibb.co/vxMC7MS/Salinan-dari-Logo-MBKM-Petengoran-1-1-removebg-preview-1.png"
+                    alt="Logo" />
+                <div class="footer-column">
+                    <h5 class="text-uppercase mb-3 font-weight-bold text-warning">Microclimate</h5>
+                    <p>Implementasi Stasiun Klimatologi Mikro Berbasis IoT dan Fotogrametri Drone Untuk Konservasi Hutan Mangrove Petengoran: Model Pembelajaran Case Methods BKP-MBKM.</p>
+                </div>
+                <div class="footer-column text-center">
+                    <h5 class="text-uppercase mb-3 font-weight-bold text-warning">Categories</h5>
+                    <p>Laravel</p>
+                    <p>PHP</p>
+                    <p>CSS</p>
+                </div>
+                <div class="footer-column pl-4">
+                    <h5 class="text-uppercase mb-3 font-weight-bold text-warning">Contact</h5>
+                    <p><i class="fas fa-home mr-2"></i>Indonesia, Bandar Lampung</p>
+                    <p><i class="fas fa-envelope mr-2"></i>Microclimate@gmail.com</p>
+                    <p><i class="fas fa-phone mr-2"></i>+62 822-3265-8261</p>
+                </div>
+            </div>
+            <hr class="mb-2">
+            <div class="row align-items-center">
+                <div class="col-md-3 col-lg-8 text-md-left text-right mb-2 d-flex justify-content-end align-items-center">
+                    <p class="mr-2 mb-0">Created by Microclimate Team &copy; 2023. All rights reserved.</p>
+                    <a class="social-icon" href="https://www.instagram.com/mbkm_petengoran/">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
+
+   
     <!-- akhir dari akhir -->
 
     <!-- Optional JavaScript -->
