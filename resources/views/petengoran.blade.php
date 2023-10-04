@@ -71,7 +71,7 @@
       <div class="container">
         <div class="row ">
           <div class="col">
-            <h2>Dashboard</h2>
+            <h2 style="color :#fff">Dashboard Petengoran</h2>
           </div>
         </div>
         <div class="row mb-4">

@@ -31,9 +31,7 @@
           padding-top: 5rem;
           padding-bottom: 5rem;
         }
-        footer{
-          background-color: #1e87f0;
-        }
+
 
         .footer {
             background-color: #343a40;
@@ -220,7 +218,7 @@
     <!-- akhir -->
    
     <!--awal footer-->
-    <footer class="footer" style="background-color: brown; color: white;">
+    <footer class="footer" style="background-color: #1e87f0; color: white;">
     <div class="container">
         <div class="footer-content">
             <img src="https://i.ibb.co/vxMC7MS/Salinan-dari-Logo-MBKM-Petengoran-1-1-removebg-preview-1.png"
