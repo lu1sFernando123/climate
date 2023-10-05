@@ -47,6 +47,15 @@ Route::get('/petengoran', function () {
         
     ]);
 });
+Route::get('/kontak', function () {
+    return view('kontak',[
+        "title" => "contact",
+
+        
+    ]);
+});
+
+
    
 
 
@@ -54,6 +63,4 @@ Route::get('/petengoran', function () {
 
 
 
-Route::get('/halaman', function () {
-    return view('dashboard\dashboard'); // Ganti 'halaman_saya' dengan nama file Blade atau path file HTML Anda
-});
+
