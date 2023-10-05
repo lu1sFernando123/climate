@@ -219,46 +219,42 @@
    
     <!--awal footer-->
     <footer class="footer" style="background-color: #1e87f0; color: white;">
-    <div class="container">
-        <div class="footer-content">
-            <img src="https://i.ibb.co/vxMC7MS/Salinan-dari-Logo-MBKM-Petengoran-1-1-removebg-preview-1.png"
-                alt="Logo" />
-            <div class="footer-column">
-                <h5 class="text-uppercase mb-3 font-weight-bold text-light">Microclimate</h5>
-                <p class="text-light">Implementasi Stasiun Klimatologi Mikro Berbasis IoT dan Fotogrametri Drone Untuk Konservasi Hutan Mangrove Petengoran: Model Pembelajaran Case Methods BKP-MBKM.</p>
+      <div class="container">
+          <div class="footer-content">
+              <img src="https://i.ibb.co/vxMC7MS/Salinan-dari-Logo-MBKM-Petengoran-1-1-removebg-preview-1.png"
+                  alt="Logo" />
+              <div class="footer-column">
+                  <h5 class="text-uppercase mb-3 font-weight-bold text-light">Microclimate</h5>
+                  <p class="text-light">Implementasi Stasiun Klimatologi Mikro Berbasis IoT dan Fotogrametri Drone Untuk Konservasi Hutan Mangrove Petengoran: Model Pembelajaran Case Methods BKP-MBKM.</p>
+                </div>
+              <div class="footer-column text-center">
+                  <h5 class="text-uppercase mb-3 font-weight-bold text-light">Categories</h5>
+                  <p class="text-light">Laravel</p>
+                  <p class="text-light">PHP</p>
+                  <p class="text-light">CSS</p>
+                </div>
+              <div class="footer-column pl-4">
+                  <h5 class="text-uppercase mb-3 font-weight-bold text-light">Contact</h5>
+                  <p class="text-light"><i class="fas fa-home mr-2"></i>Indonesia, Bandar Lampung</p>
+                  <p class="text-light"><i class="fas fa-envelope mr-2"></i>Microclimate@gmail.com</p>
+                  <p class="text-light"><i class="fas fa-phone mr-2"></i>+62 822-3265-8261</p>
+                </div>
             </div>
-            <div class="footer-column text-center">
-                <h5 class="text-uppercase mb-3 font-weight-bold text-light">Categories</h5>
-                <p class="text-light">Laravel</p>
-                <p class="text-light">PHP</p>
-                <p class="text-light">CSS</p>
-            </div>
-            <div class="footer-column pl-4">
-                <h5 class="text-uppercase mb-3 font-weight-bold text-light">Contact</h5>
-                <p class="text-light"><i class="fas fa-home mr-2"></i>Indonesia, Bandar Lampung</p>
-                <p class="text-light"><i class="fas fa-envelope mr-2"></i>Microclimate@gmail.com</p>
-                <p class="text-light"><i class="fas fa-phone mr-2"></i>+62 822-3265-8261</p>
-            </div>
-        </div>
-        <hr class="mb-2" style="background-color: white;">
-        <div class="row align-items-center">
-            <div class="col-md-3 col-lg-8 text-md-left text-right mb-2 d-flex justify-content-end align-items-center">
-                <p class="text-light mr-2 mb-0">Created by Microclimate Team &copy; 2023. All rights reserved.</p>
-                <a class="social-icon" href="https://www.instagram.com/mbkm_petengoran/">
-                    <ion-icon name="logo-instagram" style="color: white;"></ion-icon>
-                </a>
-            </div>
-        </div>
-    </div>
-</footer>
-
+          <hr class="mb-2" style="background-color: white;">
+          <div class="row align-items-center">
+              <div class="col-md-3 col-lg-8 text-md-left text-right mb-2 d-flex justify-content-end align-items-center">
+                  <p class="text-light mr-2 mb-0">Created by Microclimate Team &copy; 2023. All rights reserved.</p>
+                  <a class="social-icon" href="https://www.instagram.com/mbkm_petengoran/">
+                      <ion-icon name="logo-instagram" style="color: white;"></ion-icon>
+                  </a>
+              </div>
+          </div>
+      </div>
+    </footer>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-</body>
-
-</html>
-
+  
     <!-- akhir dari akhir -->
 
     <!-- Optional JavaScript -->
