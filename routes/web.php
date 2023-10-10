@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ChartController;
 use App\Http\Controllers\Climate;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -55,7 +57,7 @@ Route::get('/kontak', function () {
     ]);
 });
 
-
+Route::get('/cart', [ChartController::class, 'cart'])->name('cart');
    
 
 
