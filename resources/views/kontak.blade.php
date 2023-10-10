@@ -9,9 +9,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/contact.css">
+    <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
     <style>
-        
+      .navbar-nav .nav-link {
+        margin-right: 15px; /* Atur jarak antara item menu */
+      }
+
+      .icon-bars {
+        color: #fff; /* Warna ikon */
+        font-size: 24px; /* Ukuran ikon */
+      }
     </style>
   </head>
   <body>

@@ -1,14 +1,20 @@
-.navbar-nav .nav-link {
-  margin-right: 15px; /* Atur jarak antara item menu */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", "sans-serif";
 }
 
-.icon-bars {
-  color: #fff; /* Warna ikon */
-  font-size: 24px; /* Ukuran ikon */
+.header-text {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
+
 body {
   background: #6b9dd6;
-  font-size: 14px;
+  font-size: 17px;
   font-family: "Poppins", sans-serif;
 }
 .container-box {
