@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\ChartController;
 use App\Http\Controllers\Climate;
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -47,6 +49,15 @@ Route::get('/petengoran', function () {
         
     ]);
 });
+Route::get('/kontak', function () {
+    return view('kontak',[
+        "title" => "contact",
+
+        
+    ]);
+});
+
+Route::get('/cart', [ChartController::class, 'cart'])->name('cart');
    
 
 
@@ -54,6 +65,4 @@ Route::get('/petengoran', function () {
 
 
 
-Route::get('/halaman', function () {
-    return view('dashboard\dashboard'); // Ganti 'halaman_saya' dengan nama file Blade atau path file HTML Anda
-});
+

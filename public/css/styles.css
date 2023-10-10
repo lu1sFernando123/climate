@@ -1,0 +1,102 @@
+/* CSS untuk membuat navbar menjadi rounded rectangle */
+.navbar {
+  border-radius: 20px;
+}
+
+body {
+  min-height: 2000px;
+}
+
+.jumbotron {
+  padding-top: 5rem;
+  padding-bottom: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+  background-color: #ffffff;
+}
+
+#hasil {
+  background-color: #f3f4f5;
+}
+
+section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.card-text {
+  font-size: 34pt;
+}
+
+
+/* CSS untuk membuat footer */
+
+.footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.footer-column {
+  flex: 1;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.footer-column h5 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-column p {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.social-icons i {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
+.social-icon {
+  font-size: 18px;
+  color: white;
+  margin-left: 8px;
+}
+
+.footer .social-icon {
+  margin-right: 8px;
+}
+
+.footer img {
+  width: 100px; /* Sesuaikan ukuran gambar sesuai kebutuhan */
+  float: left;
+  margin-right: 20px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  margin-top: 50px; /* Adjust this value to increase or decrease the space between the footer and the content above it */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-column {
+  text-align: left;
+}
