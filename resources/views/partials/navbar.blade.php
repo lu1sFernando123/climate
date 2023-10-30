@@ -33,9 +33,11 @@
             </ul>
             <!-- Ikon "bars" di sini -->
             <i class="fas fa-bars icon-bars"></i>
+            
         </div>
     </div>
 </nav>
+
 
 
 
