@@ -60,6 +60,9 @@ Route::get('/kontak', function () {
 Route::get('/cart', [ChartController::class, 'cart'])->name('cart');
    
 
+use App\Http\Controllers\RealTimeController;
+
+Route::get('/fetch-data', [RealTimeController::class, 'fetchData']);
 
 
 
