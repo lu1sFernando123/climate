@@ -261,25 +261,25 @@ margin-right: 20px;
             <div class="footer-column pl-6">
               <h5 class="text-uppercase mb-8 font-weight-bold text-light">Contact</h5>
               <div class="flex-container">
-                <a class="social-icon" href="https://maps.app.goo.gl/kFirx7fAoZ3yLmSb9/">
+                <a class="social-icon" href="https://maps.app.goo.gl/kFirx7fAoZ3yLmSb9/"target="_blank">
                  <ion-icon name="location-outline" style="color: white;"></ion-icon>
                 </a>
                 <p class="text-light mb-0 ml-2">Lab Telekomunikasi, Teknik Elektro</p>
               </div>
               <div class="flex-container">
-                <a class="social-icon" href="mailto:microclimate@gmail.com">
+                <a class="social-icon" href="mailto:microclimate@gmail.com"target="_blank">
                 <ion-icon name="mail-outline" style="color: white;"></ion-icon>
                 </a>
                 <p class="text-light mb-0 ml-2">microclimate@gmail.com</p>
               </div>
               <div class="flex-container">
-                <a class="social-icon" href="https://wa.me/6282232658261/">
+                <a class="social-icon" href="https://wa.me/6282232658261/"target="_blank">
                   <ion-icon name="call-outline" style="color: white;">></ion-icon>
                 </a>
                 <p class="text-light mb-0 ml-2">+62 822-3265-8261</p>
               </div>
               <div class="flex-container">
-                <a class="social-icon" href="https://www.instagram.com/mbkm_petengoran/">
+                <a class="social-icon" href="https://www.instagram.com/mbkm_petengoran/"target="_blank">
                   <ion-icon name="logo-instagram" style="color: white;"></ion-icon>
                 </a>
                 <p class="text-light mb-0 ml-2">mbkm_petengoran</p>
@@ -296,12 +296,11 @@ margin-right: 20px;
               <p class="text-light mr-2 mb-0">Created by Microclimate Team &copy; 2023. All rights reserved.</p>
             </div>
           </div>
-
         </div>
       </div>
       </div>
     </footer>
-  </body>
+    </body>
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

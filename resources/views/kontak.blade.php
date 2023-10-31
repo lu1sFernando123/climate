@@ -24,35 +24,38 @@
   <body>
  <!-- bagian navbar -->
  <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburger Menu</title>
-    <link rel="stylesheet" href="./home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamburger Menu</title>
+<link rel="stylesheet" href="./home.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+  integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
 <body>
-    <header>
+  <header>
     <nav>
-        <ul class='nav-bar'>
+      <ul class='nav-bar'>
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top">
-        <div class="container">
-        <a class="navbar-brand" href="#">Microclimate</a>
+          <div class="container">
+            <a class="navbar-brand" href="#">Microclimate</a>
             <input type='checkbox' id='check' />
             <span class="menu">
-                <li class="nav-item">
-                    <a class="nav-link {{($title === "home")? 'active' : ''}}" href="/home">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link {{($title === "about")? 'active' : ''}}" href="/about">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link {{($title === "kontak")? 'active' : ''}}" href="/kontak">Contact</a>
-                  </li>
-                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+              <li class="nav-item">
+                <a class="nav-link {{($title === " home")? 'active' : '' }}" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{($title === " about")? 'active' : '' }}" href="/about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{($title === " kontak")? 'active' : '' }}" href="/kontak">Contact</a>
+              </li>
+              <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
             </span>
             <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
-        </ul>
+      </ul>
     </nav>
-
     <!-- akhir navbar -->
               <!-- Ikon "bars" di sini -->
               <i class="fas fa-bars icon-bars"></i>
