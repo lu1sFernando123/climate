@@ -280,3 +280,18 @@ body {
     margin-right: -5px; /* Atur margin kanan negatif pada teks untuk memindahkannya ke kiri */
 }
 
+.c-item {
+  height: 480px;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.carousel-inner>.carousel-item {
+  display: none;
+  position: relative;
+  transition: transform 0s ease-in-out;
+}
