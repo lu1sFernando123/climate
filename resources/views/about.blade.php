@@ -142,12 +142,10 @@ margin-right: 20px;
                 <span class="overlay"></span>
 
                 <div class="card-image">
-                  <img src="{{ asset('images/rizkan.jpg') }}" alt="" class="card-img">
                 </div>
               </div>
 
               <div class="card-content">
-                <h2 class="name">Rizkan ganteng</h2>
 
                 <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde perferendis eaque
                   dolores officiis placeat delectus quaerat nihil quia neque iusto!</p>
@@ -158,12 +156,10 @@ margin-right: 20px;
                 <span class="overlay"></span>
 
                 <div class="card-image">
-                  <img src="{{ asset('images/rizkan.jpg') }}" alt="" class="card-img">
                 </div>
               </div>
 
               <div class="card-content">
-                <h2 class="name">Rizkan ganteng</h2>
 
                 <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde perferendis eaque
                   dolores officiis placeat delectus quaerat nihil quia neque iusto!</p>
@@ -174,12 +170,10 @@ margin-right: 20px;
                 <span class="overlay"></span>
 
                 <div class="card-image">
-                  <img src="{{ asset('images/rizkan.jpg') }}" alt="" class="card-img">
                 </div>
               </div>
 
               <div class="card-content">
-                <h2 class="name">Rizkan ganteng</h2>
 
                 <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde perferendis eaque
                   dolores officiis placeat delectus quaerat nihil quia neque iusto!</p>
@@ -190,12 +184,10 @@ margin-right: 20px;
                 <span class="overlay"></span>
 
                 <div class="card-image">
-                  <img src="{{ asset('images/rizkan.jpg') }}" alt="" class="card-img">
                 </div>
               </div>
 
               <div class="card-content">
-                <h2 class="name">Rizkan ganteng</h2>
 
                 <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde perferendis eaque
                   dolores officiis placeat delectus quaerat nihil quia neque iusto!</p>
@@ -206,12 +198,10 @@ margin-right: 20px;
                 <span class="overlay"></span>
 
                 <div class="card-image">
-                  <img src="{{ asset('images/rizkan.jpg') }}" alt="" class="card-img">
                 </div>
               </div>
 
               <div class="card-content">
-                <h2 class="name">Rizkan ganteng</h2>
 
                 <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde perferendis eaque
                   dolores officiis placeat delectus quaerat nihil quia neque iusto!</p>
@@ -222,12 +212,10 @@ margin-right: 20px;
                 <span class="overlay"></span>
 
                 <div class="card-image">
-                  <img src="{{ asset('images/rizkan.jpg') }}" alt="" class="card-img">
                 </div>
               </div>
 
               <div class="card-content">
-                <h2 class="name">Rizkan ganteng</h2>
 
                 <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde perferendis eaque
                   dolores officiis placeat delectus quaerat nihil quia neque iusto!</p>
@@ -253,8 +241,8 @@ margin-right: 20px;
           </div>
           <div class="footer-column text-center">
             <h5 class="text-uppercase mb-3 font-weight-bold text-light">Stasiun</h5>
-            <p><a class="text-light" href="/petengoran">Petengoran</a></p>
-            <p><a class="text-light" href="/panjang">Panjang</a></p>
+            <p><a class="text-light" href="/petengoran">Petengoran 1</a></p>
+            <p><a class="text-light" href="/panjang">Petengoran 2</a></p>
             
           </div>
           <div class="footer-column pl-6">
