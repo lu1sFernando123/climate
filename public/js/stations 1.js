@@ -6,22 +6,21 @@ function updateTable(data) {
   data.result.slice(0, 10).forEach((item) => {
     const row = tableBody.insertRow();
     row.innerHTML = `
-      <td>${item.id}</td>
-      <td>${item.datetime}</td>
-      <td>${item.temperature_280}</td>
-      <td>${item.humidity_280}</td>
-      <td>${item.pressure_388}</td>
-      <td>${item.phsensor}</td>
-      <td>${item.windvane}</td>
-      <td>${item.pressure_280}</td>
-      <td>${item.rainstatus}</td>
-      <td>${item.pressure_388}</td>
-      <td>${item.phsensor}</td>
-      <td>${item.windvane}</td>
-      <td>${item.pressure_280}</td>
-      <td>${item.rainstatus}</td>
-      <td>${item.pressure_280}</td>
-      <td>${item.rainstatus}</td>
+      <td>${item.time}</td>
+      <td>${item.temperature}</td>
+      <td>${item.humidity}</td>
+      <td>${item.rainfall}</td>
+      <td>${item.wind_direction}</td>
+      <td>${item.wind_direction_degrees}</td>
+      <td>${item.wind_speed}</td>
+      <td>${item.water_temperature}</td>
+      <td>${item.irradiation}</td>
+      <td>${item.co}</td>
+      <td>${item.ch4}</td>
+      <td>${item.c2h5oh}</td>
+      <td>${item.h2}</td>
+      <td>${item.nh3}</td>
+      <td>${item.no2}</td>
     `;
   });
 }
@@ -29,9 +28,9 @@ function updateTable(data) {
 function getColorBasedOnValue(value, parameter) {
   if (parameter === "co") {
     if (value <= 50) {
-      return "green"; // Warna hijau untuk nilai di bawah atau sama dengan 50
+      return "blue"; // Warna hijau untuk nilai di bawah atau sama dengan 50
     } else if (value <= 100) {
-      return "blue"; // Warna biru untuk nilai antara 51 hingga 100
+      return "green"; // Warna biru untuk nilai antara 51 hingga 100
     } else if (value <= 200) {
       return "yellow"; // Warna kuning untuk nilai antara 101 hingga 200
     } else if (value <= 300) {
@@ -52,29 +51,31 @@ function getColorBasedOnValue(value, parameter) {
       return "black"; // Topan, warna hitam
     }
   } else if (parameter === "irradiation") {
-    if (value >= 200 && value <= 250) {
-      return "green"; // Warna hijau untuk nilai antara 200 hingga 250
-    } else if (value >= 251 && value <= 300) {
-      return "yellow"; // Warna kuning untuk nilai antara 251 hingga 300
-    } else if (value >= 301 && value <= 350) {
-      return "red"; // Warna merah untuk nilai antara 301 hingga 350
-    } else if (value >= 351 && value <= 400) {
-      return "black"; // Warna hitam untuk nilai antara 351 hingga 400
+    if (value >= 0 && value <= 200) {
+      return "blue"; // Abu-abu untuk nilai 0 (berawan)
+    } else if (value >= 200 && value <= 300) {
+      return "green"; 
+    } else if (value >= 301 && value <= 400) {
+      return "yellow"; 
+    } else if (value >= 401 && value <= 500) {
+      return "red"; 
+    } else if (value >= 501 ) {
+      return "black"; //
     }
   } else if (parameter === "rainfall") {
     if (value === 0) {
-      return "gray"; // Abu-abu untuk nilai 0 (berawan)
+      return "blue"; // Biru untuk tidak ada hujan
     } else if (value > 0 && value <= 0.5) {
-      return "blue"; // Biru untuk hujan ringan (0.5 mm - 20 mm)
+      return "green"; // Hijau untuk hujan ringan (1 mm - 20 mm)
     } else if (value > 0.5 && value <= 20) {
-      return "green"; // Hijau untuk hujan sedang (21 mm - 50 mm)
-    } else if (value > 20 && value <= 50) {
-      return "yellow"; // Kuning untuk hujan lebat (51 mm - 100 mm)
-    } else if (value > 50 && value <= 150) {
-      return "red"; // Merah untuk hujan lebat (101 mm - 150 mm)
+      return "yellow"; // Kuning untuk hujan sedang (21 mm - 50 mm)
+    } else if (value > 21 && value <= 50) {
+      return "orange"; // Oranye untuk hujan lebat (51 mm - 100 mm)
+    } else if (value > 51 && value <= 150) {
+      return "red"; // Merah untuk hujan sangat lebat (101 mm - 150 mm)
     } else {
       return "black"; // Hitam untuk hujan ekstrem (151 mm ke atas)
-    }
+    }  
   } else if (parameter === "water temperature") {
     if (value >= 0 && value <= 4) {
       return "blue"; // Warna biru untuk nilai antara 0 hingga 4
@@ -90,7 +91,7 @@ function getColorBasedOnValue(value, parameter) {
       return "default-color"; // Warna default jika nilai di luar rentang yang diberikan
     }
   } else if (parameter === "no2") {
-    if (value >= 0.05 && value <= 1) {
+    if (value >= 0 && value <= 1) {
       return "blue"; // Warna biru untuk nilai antara 0.05 hingga 1
     } else if (value >= 2 && value <= 4) {
       return "green"; // Warna hijau untuk nilai antara 2 hingga 4
@@ -104,7 +105,7 @@ function getColorBasedOnValue(value, parameter) {
       return "default-color"; // Warna default jika nilai di luar rentang yang diberikan
     }
   } else if (parameter === "c2h5oh") {
-    if (value >= 10 && value <= 70) {
+    if (value >= 0 && value <= 70) {
       return "blue"; // Warna biru untuk nilai antara 10 hingga 70
     } else if (value >= 71 && value <= 170) {
       return "green"; // Warna hijau untuk nilai antara 71 hingga 170
@@ -116,7 +117,7 @@ function getColorBasedOnValue(value, parameter) {
       return "black"; // Warna hitam untuk nilai antara 401 hingga 500
     }
   } else if (parameter === "h2") {
-    if (value >= 1 && value <= 100) {
+    if (value >= 0 && value <= 100) {
       return "blue"; // Warna biru untuk nilai antara 1 hingga 100
     } else if (value >= 101 && value <= 300) {
       return "green"; // Warna hijau untuk nilai antara 101 hingga 300
@@ -131,7 +132,7 @@ function getColorBasedOnValue(value, parameter) {
     }
   } else if (parameter === "ch4") {
     if (value <= 1000) {
-      return "gray"; // Warna abu-abu jika nilai di bawah atau sama dengan 1000
+      return "blue"; // Warna abu-abu jika nilai di bawah atau sama dengan 1000
     } else {
       return "green"; // Warna hijau jika nilai di atas 1000
     }
@@ -178,30 +179,31 @@ function getColorBasedOnValue(value, parameter) {
   } else {
     return "default-color"; // Handle parameter lain jika diperlukan
   }
+  
 }
 
 function updateGauge(elementId, value, parameter) {
   const backgroundColor = getColorBasedOnValue(value, parameter);
   document.getElementById(elementId).innerText = value.toFixed(2);
   document.getElementById(elementId).style.backgroundColor = backgroundColor;
-  document.getElementById(elementId).style.borderRadius = "25px"
+  document.getElementById(elementId).style.borderRadius = "25px";
   document.getElementById(elementId).style.color = "white";
 }
 
-
 function updateGauges(data) {
-  const irradiationValue = parseFloat(data.result[0].pressure_280);
-  const coValue = parseFloat(data.result[0].phsensor);
-  const temperatureValue = parseFloat(data.result[0].temperature_280);
-  const humidityValue = parseFloat(data.result[0].humidity_280);
-  const waterTemperatureValue = parseFloat(data.result[0].phsensor);
-  const windSpeedValue = parseFloat(data.result[0].windvane);
+  const irradiationValue = parseFloat(data.result[0].irradiation);
+  const coValue = parseFloat(data.result[0].co);
+  const temperatureValue = parseFloat(data.result[0].temperature);
+  const humidityValue = parseFloat(data.result[0].humidity);
+  const waterTemperatureValue = parseFloat(data.result[0].water_temperature);
+  const windSpeedValue = parseFloat(data.result[0].wind_speed);
   const rainfallValue = parseFloat(data.result[0].rainfall);
   const no2Value = parseFloat(data.result[0].no2);
   const nh3Value = parseFloat(data.result[0].nh3);
   const c2h5ohValue = parseFloat(data.result[0].c2h5oh);
   const h2Value = parseFloat(data.result[0].h2);
   const ch4Value = parseFloat(data.result[0].ch4);
+  const wind_directionValue = parseFloat(data.result[0].wind_direction);
 
   updateGauge("irradiation", irradiationValue, "irradiation");
   updateGauge("co", coValue, "co");
@@ -209,12 +211,12 @@ function updateGauges(data) {
   updateGauge("humidity", humidityValue, "humidity");
   updateGauge("water temperature", waterTemperatureValue, "water temperature");
   updateGauge("wind speed", windSpeedValue, "wind speed");
-  updateGauge("rainfall", windSpeedValue, "rainfall");
-  updateGauge("no2", waterTemperatureValue, "no2");
-  updateGauge("nh3", waterTemperatureValue, "nh3");
-  updateGauge("c2h5oh", waterTemperatureValue, "c2h5oh");
-  updateGauge("h2", irradiationValue, "h2");
-  updateGauge("ch4", irradiationValue, "ch4");
+  updateGauge("rainfall", rainfallValue, "rainfall");
+  updateGauge("no2", no2Value, "no2");
+  updateGauge("nh3", nh3Value, "nh3");
+  updateGauge("c2h5oh", c2h5ohValue, "c2h5oh");
+  updateGauge("h2", h2Value, "h2");
+  updateGauge("ch4", ch4Value, "ch4");
 }
 
 // Contoh pemanggilan fungsi updateGauges dengan data palsu
@@ -223,8 +225,8 @@ const dummyData = {
     {
       pressure_280: 15,
       pressure_388: 30,
-      temperature_280: 80,
-      humidity_280: 40,
+      temperature: 80,
+      humidity: 40,
       phsensor: 110,
       windvane: 200,
     },
@@ -234,213 +236,100 @@ const dummyData = {
 updateGauges(dummyData);
 
 function updateCharts(data) {
-  const labels = data.result.map((item) => item.datetime);
+  // Reverse the order of the labels array to display the latest timestamp on the left
+  const labels = data.result.map((item) => item.time).reverse();
+
+  const createDataset = (label, dataKey, colorKey) => ({
+    label: label,
+    data: data.result.map((item) => item[dataKey]).reverse(),
+    borderColor: data.result
+      .map((item) => getColorBasedOnValue(item[dataKey], colorKey))
+      .reverse(),
+    borderWidth: 2,
+    fill: false,
+    pointRadius: 5,
+    pointHoverRadius: 7,
+  });
+
   const datasets = [
-    {
-      label: "Temperature (°C)",
-      data: data.result.map((item) => item.temperature_280),
-      borderColor: data.result.map((item) =>
-        getColorBasedOnValue(item.temperature_280, "temperature")
-      ),
-      borderWidth: 1,
-      fill: false,
-    },
-    {
-      label: "Humidity (%)",
-      data: data.result.map((item) => item.humidity_280),
-      borderColor: data.result.map((item) =>
-        getColorBasedOnValue(item.humidity_280, "humidity")
-      ),
-      borderWidth: 1,
-      fill: false,
-    },
-    {
-      label: "CO2",
-      data: data.result.map((item) => item.pressure_388),
-      borderColor: data.result.map((item) =>
-        getColorBasedOnValue(item.pressure_388, "co")
-      ),
-      borderWidth: 1,
-      fill: false,
-    },
-    {
-      label: "Water Temperature",
-      data: data.result.map((item) => item.phsensor),
-      borderColor: data.result.map((item) =>
-        getColorBasedOnValue(item.phsensor, "water temperature")
-      ),
-      borderWidth: 1,
-      fill: false,
-    },
-    {
-      label: "Wind Speed",
-      data: data.result.map((item) => item.windvane),
-      borderColor: data.result.map((item) =>
-        getColorBasedOnValue(item.windvane, "wind speed")
-      ),
-      borderWidth: 1,
-      fill: false,
-    },
-    {
-      label: "Irradiation",
-      data: data.result.map((item) => item.pressure_280),
-      borderColor: data.result.map((item) =>
-        getColorBasedOnValue(item.pressure_280, "irradiation")
-      ),
-      borderWidth: 1,
-      fill: false,
-    },
-    {
-      label: "Rainfall",
-      data: data.result.map((item) => item.rainstatus),
-      borderColor: data.result.map((item) =>
-        getColorBasedOnValue(item.rainstatus, "rainfall")
-      ),
-      borderWidth: 1,
-      fill: false,
-    },
-    {
-      label: "NO2",
-      data: data.result.map((item) => item.no2),
-      borderColor: data.result.map((item) =>
-        getColorBasedOnValue(item.no2, "no2")
-      ),
-      borderWidth: 1,
-      fill: false,
-    },
-    {
-      label: "NH3",
-      data: data.result.map((item) => item.nh3),
-      borderColor: data.result.map((item) =>
-        getColorBasedOnValue(item.nh3, "nh3")
-      ),
-      borderWidth: 1,
-      fill: false,
-    },
-    {
-      label: "C2H5OH",
-      data: data.result.map((item) => item.c2h5oh),
-      borderColor: data.result.map((item) =>
-        getColorBasedOnValue(item.c2h5oh, "c2h5oh")
-      ),
-      borderWidth: 1,
-      fill: false,
-    },
-    {
-      label: "H2",
-      data: data.result.map((item) => item.h2),
-      borderColor: data.result.map((item) =>
-        getColorBasedOnValue(item.h2, "h2")
-      ),
-      borderWidth: 1,
-      fill: false,
-    },
-    {
-      label: "CH4",
-      data: data.result.map((item) => item.ch4),
-      borderColor: data.result.map((item) =>
-        getColorBasedOnValue(item.ch4, "ch4")
-      ),
-      borderWidth: 1,
-      fill: false,
-    },
+    createDataset("Temperature (°C)", "temperature", "temperature"),
+    createDataset("Humidity (%)", "humidity", "humidity"),
+    createDataset("CO", "co", "co"),
+    createDataset("Water Temperature", "water_temperature", "water temperature"),
+    createDataset("NO2", "no2", "no2"),
+    createDataset("Wind Speed", "wind_speed", "wind speed"),
+    createDataset("Irradiation", "irradiation", "irradiation"),
+    createDataset("Rainfall", "rainfall", "rainfall"),
+    createDataset("NH3", "nh3", "nh3"),
+    createDataset("C2H5OH", "c2h5oh", "c2h5oh"),
+    createDataset("H2", "h2", "h2"),
+    createDataset("CH4", "ch4", "ch4"),
   ];
 
-  // Menggambar grafik secara dinamis
   const chartOptions = {
     responsive: true,
     maintainAspectRatio: false,
+    scales: {
+      x: {
+        type: 'linear', // Use linear scale for timestamps
+        position: 'bottom',
+        title: {
+          display: true,
+          text: 'Timestamp',
+        },
+      },
+      y: {
+        title: {
+          display: true,
+          text: 'Value',
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: true,
+        position: 'top',
+      },
+      tooltip: {
+        mode: 'index',
+        intersect: false,
+      },
+    },
+    title: {
+      display: true,
+      text: 'Environmental Data Chart',
+    },
   };
 
-  // Menggambar grafik temperatur
-  var temperatureCtx = document
-    .getElementById("temperatureChart")
-    .getContext("2d");
-  new Chart(temperatureCtx, {
-    type: "line",
-    data: {
-      labels: labels,
-      datasets: [datasets[0]],
-    },
-    options: chartOptions,
-  });
+  drawChart("temperatureChart", [datasets[0]], labels, temperature);
+  drawChart("humidityChart", [datasets[1]], labels, humidity);
+  drawChart("coChart", [datasets[2]], labels, co);
+  drawChart("no2Chart", [datasets[3]], labels, no2);
+  drawChart("windSpeedChart", [datasets[4]], labels, );
+  drawChart("irradiationChart", [datasets[5]], labels, irradiation);
+  drawChart("rainfallChart", [datasets[6]], labels, rainfall);
+  drawChart("nh3Chart", [datasets[7]], labels, nh3);
+  drawChart("waterTemperatureChart", [datasets[8]], labels, );
+  drawChart("c2h5ohChart", [datasets[9]], labels, c2h5oh);
+  drawChart("h2Chart", [datasets[10]], labels, h2);
+  drawChart("ch4Chart", [datasets[11]], labels, ch4);
+}
 
-  // Menggambar grafik kelembaban
-  var humidityCtx = document.getElementById("humidityChart").getContext("2d");
-  new Chart(humidityCtx, {
+function drawChart(canvasId, datasets, labels, options) {
+  var ctx = document.getElementById(canvasId).getContext("2d");
+  new Chart(ctx, {
     type: "line",
     data: {
       labels: labels,
-      datasets: [datasets[1]],
+      datasets: datasets,
     },
-    options: chartOptions,
-  });
-
-  // Menggambar grafik CO2
-  var co2Ctx = document.getElementById("coChart").getContext("2d");
-  new Chart(co2Ctx, {
-    type: "line",
-    data: {
-      labels: labels,
-      datasets: [datasets[2]],
-    },
-    options: chartOptions,
-  });
-
-  // Menggambar grafik Water Temperature
-  var waterTemperatureCtx = document
-    .getElementById("waterTemperatureChart")
-    .getContext("2d");
-  new Chart(waterTemperatureCtx, {
-    type: "line",
-    data: {
-      labels: labels,
-      datasets: [datasets[3]],
-    },
-    options: chartOptions,
-  });
-
-  // Menggambar grafik Wind Speed
-  var windSpeedCtx = document.getElementById("windSpeedChart").getContext("2d");
-  new Chart(windSpeedCtx, {
-    type: "line",
-    data: {
-      labels: labels,
-      datasets: [datasets[4]],
-    },
-    options: chartOptions,
-  });
-
-  // Menggambar grafik Irradiation
-  var irradiationCtx = document
-    .getElementById("irradiationChart")
-    .getContext("2d");
-  new Chart(irradiationCtx, {
-    type: "line",
-    data: {
-      labels: labels,
-      datasets: [datasets[5]],
-    },
-    options: chartOptions,
-  });
-
-  // Menggambar grafik Rainfall
-  var rainfallCtx = document.getElementById("rainfallChart").getContext("2d");
-  new Chart(rainfallCtx, {
-    type: "line",
-    data: {
-      labels: labels,
-      datasets: [datasets[6]],
-    },
-    options: chartOptions,
+    options: options,
   });
 }
 
 async function fetchDataAndUpdate() {
   try {
-    const response = await fetch(
-      "https://vps.isi-net.org:5000/GetDataGistingNew"
-    );
+    const response = await fetch("https://vps.isi-net.org:9300/climate/latest");
     const data = await response.json();
 
     // Update tampilan dengan data yang diterima dari server
@@ -455,8 +344,6 @@ async function fetchDataAndUpdate() {
   }
 }
 
-// Panggil fetchDataAndUpdate secara berkala setiap 2 detik
-setInterval(fetchDataAndUpdate, 2000);
 
 // Panggil fetchDataAndUpdate untuk pertama kali
 fetchDataAndUpdate();
